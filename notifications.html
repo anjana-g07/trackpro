@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - TrackPro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>📦 TrackPro</h2>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="track.html">📍 Track Package</a>
+            <a href="packages.html">📦 Packages</a>
+            <a href="routes.html">🛣️ Routes</a>
+            <a href="couriers.html">🚚 Couriers</a>
+            <a href="timeline.html">🕐 Timeline</a>
+            <a href="notifications.html" class="active">🔔 Notifications</a>
+            <a href="reports.html">📊 Reports</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>🔔 Notifications</h1>
+                <p>Delivery status updates and alerts</p>
+            </div>
+        </header>
+
+        <section class="dashboard-section">
+
+            <h2>🔔 Recent Notifications</h2>
+
+            <div style="margin-top:20px;">
+
+                <div style="padding:20px; border:1px solid #eee; border-radius:10px; margin-bottom:15px;">
+                    <h3>📦 Package In Transit</h3>
+                    <p>TRK10001 is currently in transit.</p>
+                    <small>Today, 5:45 PM</small>
+                </div>
+
+                <div style="padding:20px; border:1px solid #eee; border-radius:10px; margin-bottom:15px;">
+                    <h3>🚚 Out for Delivery</h3>
+                    <p>TRK10004 is out for delivery.</p>
+                    <small>Today, 3:20 PM</small>
+                </div>
+
+                <div style="padding:20px; border:1px solid #eee; border-radius:10px; margin-bottom:15px;">
+                    <h3>✅ Package Delivered</h3>
+                    <p>TRK10002 was successfully delivered.</p>
+                    <small>Yesterday, 6:10 PM</small>
+                </div>
+
+                <div style="padding:20px; border:1px solid #eee; border-radius:10px;">
+                    <h3>⚠️ Delivery Update</h3>
+                    <p>TRK10003 delivery is scheduled soon.</p>
+                    <small>Yesterday, 2:30 PM</small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-section" style="margin-top:25px;">
+
+            <h2>📨 Send Notification</h2>
+
+            <input
+                type="text"
+                id="notificationMessage"
+                placeholder="Enter notification message"
+                style="width:100%; padding:14px; margin-top:20px; border:1px solid #ddd; border-radius:8px;"
+            >
+
+            <button
+                onclick="sendNotification()"
+                style="margin-top:15px; padding:13px 25px; background:#f59e0b; color:white; border:none; border-radius:8px; cursor:pointer;">
+                Send Notification
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+function sendNotification() {
+
+    const message = document.getElementById("notificationMessage").value;
+
+    if (message.trim() === "") {
+        alert("Please enter a notification");
+        return;
+    }
+
+    alert("✅ Notification sent successfully!");
+
+    document.getElementById("notificationMessage").value = "";
+}
+</script>
+
+</body>
+</html>

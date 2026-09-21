@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - TrackPro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>📦 TrackPro</h2>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="track.html">📍 Track Package</a>
+            <a href="packages.html" class="active">📦 Packages</a>
+            <a href="routes.html">🛣️ Routes</a>
+            <a href="couriers.html">🚚 Couriers</a>
+            <a href="timeline.html">🕐 Timeline</a>
+            <a href="notifications.html">🔔 Notifications</a>
+            <a href="reports.html">📊 Reports</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Package Management</h1>
+                <p>Create and manage delivery packages</p>
+            </div>
+        </header>
+
+        <section class="dashboard-section">
+
+            <h2>➕ Add Package</h2>
+
+            <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:20px;">
+
+                <input id="packageId"
+                       placeholder="Tracking ID"
+                       style="padding:13px; border:1px solid #ddd; border-radius:8px;">
+
+                <input id="customerName"
+                       placeholder="Customer Name"
+                       style="padding:13px; border:1px solid #ddd; border-radius:8px;">
+
+                <input id="packageLocation"
+                       placeholder="Location"
+                       style="padding:13px; border:1px solid #ddd; border-radius:8px;">
+
+                <select id="packageStatus"
+                        style="padding:13px; border:1px solid #ddd; border-radius:8px;">
+                    <option>Pending</option>
+                    <option>In Transit</option>
+                    <option>Out for Delivery</option>
+                    <option>Delivered</option>
+                    <option>Failed</option>
+                </select>
+
+            </div>
+
+            <button onclick="addPackage()"
+                    style="margin-top:15px; padding:13px 25px; background:#f59e0b; color:white; border:none; border-radius:8px; cursor:pointer;">
+                Add Package
+            </button>
+
+        </section>
+
+        <section class="dashboard-section" style="margin-top:25px;">
+
+            <h2>📦 Package List</h2>
+            <input
+    type="text"
+    id="packageSearch"
+    placeholder="🔍 Search Tracking ID or Customer..."
+    onkeyup="searchPackages()"
+    style="width:100%; padding:14px; margin:20px 0; border:1px solid #ddd; border-radius:8px;"
+>
+
+            <div style="overflow-x:auto; margin-top:20px;">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tracking ID</th>
+                            <th>Customer</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="packageTable"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+<script>
+    displayPackages();
+</script>
+
+</body>
+</html>

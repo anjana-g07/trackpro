@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - TrackPro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>📦 TrackPro</h2>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="track.html">📍 Track Package</a>
+            <a href="packages.html">📦 Packages</a>
+            <a href="routes.html">🛣️ Routes</a>
+            <a href="couriers.html">🚚 Couriers</a>
+            <a href="timeline.html">🕐 Timeline</a>
+            <a href="notifications.html">🔔 Notifications</a>
+            <a href="reports.html" class="active">📊 Reports</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Reports & Analytics</h1>
+                <p>Delivery performance overview</p>
+            </div>
+        </header>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="card">
+                <span>📦</span>
+                <h3>Total Deliveries</h3>
+                <strong id="reportTotal">0</strong>
+            </div>
+
+            <div class="card">
+                <span>✅</span>
+                <h3>Successful</h3>
+                <strong id="reportDelivered">0</strong>
+            </div>
+
+            <div class="card">
+                <span>🔄</span>
+                <h3>In Transit</h3>
+                <strong id="reportTransit">0</strong>
+            </div>
+
+            <div class="card">
+                <span>❌</span>
+                <h3>Failed</h3>
+                <strong>50</strong>
+            </div>
+
+        </section>
+
+        <!-- Analytics -->
+        <section class="dashboard-section">
+
+            <h2>📈 Delivery Analytics</h2>
+
+            <div style="margin-top:25px;">
+
+                <p>Delivered</p>
+
+                <div style="background:#eee; height:25px; border-radius:20px; margin:8px 0 20px;">
+                    <div style="background:#22c55e; width:68%; height:100%; border-radius:20px;"></div>
+                </div>
+
+                <p>In Transit</p>
+
+                <div style="background:#eee; height:25px; border-radius:20px; margin:8px 0 20px;">
+                    <div style="background:#3b82f6; width:28%; height:100%; border-radius:20px;"></div>
+                </div>
+
+                <p>Failed</p>
+
+                <div style="background:#eee; height:25px; border-radius:20px; margin:8px 0 20px;">
+                    <div style="background:#ef4444; width:4%; height:100%; border-radius:20px;"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Report -->
+        <section class="dashboard-section" style="margin-top:25px;">
+
+            <h2>📄 Generate Report</h2>
+
+            <p style="margin-top:10px; color:#777;">
+                Download a simulated delivery performance report.
+            </p>
+
+            <button onclick="generateReport()"
+                style="
+                margin-top:20px;
+                padding:13px 25px;
+                background:#f59e0b;
+                color:white;
+                border:none;
+                border-radius:8px;
+                cursor:pointer;">
+                Generate Report
+            </button>
+            <button onclick="exportCSV()" class="dark-btn">
+    📥 Download CSV
+</button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+function generateReport() {
+    alert("✅ Delivery report generated successfully!");
+}
+</script>
+
+</body>
+</html>
+<script src="js/script.js"></script>
+
+<script>
+    document.getElementById("reportTotal").textContent = packages.length;
+    document.getElementById("reportDelivered").textContent =
+        packages.filter(p => p.status === "Delivered").length;
+    document.getElementById("reportTransit").textContent =
+        packages.filter(p => p.status === "In Transit").length;
+</script>

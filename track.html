@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Package - TrackPro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>📦 TrackPro</h2>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="track.html" class="active">📍 Track Package</a>
+            <a href="packages.html">📦 Packages</a>
+            <a href="routes.html">🛣️ Routes</a>
+            <a href="couriers.html">🚚 Couriers</a>
+            <a href="timeline.html">🕐 Timeline</a>
+            <a href="notifications.html">🔔 Notifications</a>
+            <a href="reports.html">📊 Reports</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <a href="index.html" class="home-btn">🏠 Home</a>
+            <div>
+                <h1>Track Package</h1>
+                <p>Enter your tracking number to check delivery status</p>
+            </div>
+        </header>
+
+        <!-- Search -->
+        <section class="dashboard-section">
+
+            <h2>🔍 Track Your Package</h2>
+
+            <div style="display:flex; gap:10px; margin-top:20px;">
+
+                <input
+    type="text"
+    id="trackingInput"
+    placeholder="Enter Tracking ID e.g. TRK10001"
+    onkeyup="if(event.key==='Enter') trackPackage()"
+
+                >
+
+                <button
+                    onclick="trackPackage()"
+                    style="padding:15px 25px; background:#f59e0b; color:white; border:none; border-radius:8px; cursor:pointer;">
+                    Track
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Result -->
+        <section class="dashboard-section" style="margin-top:25px;">
+
+            <h2>📦 Package Details</h2>
+
+            <div id="trackingResult" style="margin-top:20px;">
+                <p>Enter a tracking number above.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

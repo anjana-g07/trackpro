@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couriers - TrackPro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>📦 TrackPro</h2>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="track.html">📍 Track Package</a>
+            <a href="packages.html">📦 Packages</a>
+            <a href="routes.html">🛣️ Routes</a>
+            <a href="couriers.html" class="active">🚚 Couriers</a>
+            <a href="timeline.html">🕐 Timeline</a>
+            <a href="notifications.html">🔔 Notifications</a>
+            <a href="reports.html">📊 Reports</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Courier Management</h1>
+                <p>Manage couriers and delivery assignments</p>
+            </div>
+        </header>
+
+        <section class="dashboard-section">
+
+            <h2>🚚 Courier List</h2>
+
+            <div style="overflow-x:auto; margin-top:20px;">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Courier ID</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Vehicle</th>
+                            <th>Deliveries</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>C001</td>
+                            <td>Arun Kumar</td>
+                            <td>9876543210</td>
+                            <td>Bike</td>
+                            <td>24</td>
+                            <td>
+                                <span class="status delivered">Active</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>C002</td>
+                            <td>Rahul</td>
+                            <td>9876543211</td>
+                            <td>Van</td>
+                            <td>18</td>
+                            <td>
+                                <span class="status delivered">Active</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>C003</td>
+                            <td>Vishnu</td>
+                            <td>9876543212</td>
+                            <td>Bike</td>
+                            <td>15</td>
+                            <td>
+                                <span class="status pending">Available</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>C004</td>
+                            <td>Surya</td>
+                            <td>9876543213</td>
+                            <td>Van</td>
+                            <td>21</td>
+                            <td>
+                                <span class="status transit">On Route</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-section" style="margin-top:25px;">
+
+            <h2>📍 Courier Location</h2>
+
+            <div style="
+                margin-top:20px;
+                padding:40px;
+                background:#fef3c7;
+                border-radius:12px;
+                text-align:center;
+                font-size:22px;
+            ">
+
+                🚚 Arun Kumar
+
+                <p style="font-size:16px; margin-top:15px;">
+                    📍 Currently near Kochi
+                </p>
+
+                <p style="font-size:14px; color:#777; margin-top:8px;">
+                    Location tracking is simulated for this project.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

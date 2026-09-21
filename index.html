@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackPro - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>📦 TrackPro</h2>
+
+            <nav>
+                <a href="index.html" class="active">🏠 Dashboard</a>
+                <a href="track.html">📍 Track Package</a>
+                <a href="packages.html">📦 Packages</a>
+                <a href="routes.html">🛣️ Routes</a>
+                <a href="couriers.html">🚚 Couriers</a>
+                <a href="timeline.html">🕐 Timeline</a>
+                <a href="notifications.html">🔔 Notifications</a>
+                <a href="reports.html">📊 Reports</a>
+                <a href="#" onclick="logoutUser()">🚪 Logout</a>
+            </nav>
+        </aside>
+<footer class="footer">
+    <p>© 2026 TrackPro – Delivery Tracking System</p>
+    <p>Fast • Reliable • Professional Delivery Management</p>
+</footer>
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <button onclick="toggleDarkMode()" class="dark-btn">
+    🌙 Dark Mode
+</button>
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome to TrackPro 👋 Manage your deliveries easily.</p>
+                </div>
+
+                <div class="profile">
+                    👤 Admin
+                </div>
+            </header>
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="card">
+    <span>📦</span>
+    <h3>Total Packages</h3>
+    <strong id="totalPackages">0</strong>
+</div>
+
+<div class="card">
+    <span>🔄</span>
+    <h3>In Transit</h3>
+    <strong id="inTransit">0</strong>
+</div>
+
+<div class="card">
+    <span>✅</span>
+    <h3>Delivered</h3>
+    <strong id="delivered">0</strong>
+</div>
+
+<div class="card">
+    <span>🚚</span>
+    <h3>Active Couriers</h3>
+    <strong id="activeCouriers">48</strong>
+</div>
+
+            </section>
+
+            <!-- Recent Packages -->
+            <section class="dashboard-section">
+
+                <h2>Recent Package Updates</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tracking ID</th>
+                            <th>Customer</th>
+                            <th>Status</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>TRK10001</td>
+                            <td>Ananya</td>
+                            <td><span class="status transit">In Transit</span></td>
+                            <td>Chennai</td>
+                        </tr>
+
+                        <tr>
+                            <td>TRK10002</td>
+                            <td>Rahul</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                            <td>Kochi</td>
+                        </tr>
+
+                        <tr>
+                            <td>TRK10003</td>
+                            <td>Priya</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>Bangalore</td>
+                        </tr>
+
+                        <tr>
+                            <td>TRK10004</td>
+                            <td>Arun</td>
+                            <td><span class="status out">Out for Delivery</span></td>
+                            <td>Coimbatore</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

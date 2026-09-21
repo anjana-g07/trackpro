@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routes - TrackPro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>📦 TrackPro</h2>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="track.html">📍 Track Package</a>
+            <a href="packages.html">📦 Packages</a>
+            <a href="routes.html" class="active">🛣️ Routes</a>
+            <a href="couriers.html">🚚 Couriers</a>
+            <a href="timeline.html">🕐 Timeline</a>
+            <a href="notifications.html">🔔 Notifications</a>
+            <a href="reports.html">📊 Reports</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Delivery Routes</h1>
+                <p>Manage delivery routes and courier assignments</p>
+            </div>
+        </header>
+
+        <section class="dashboard-section">
+
+            <h2>🛣️ Active Routes</h2>
+
+            <div style="overflow-x:auto; margin-top:20px;">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Route ID</th>
+                            <th>From</th>
+                            <th>Destination</th>
+                            <th>Courier</th>
+                            <th>Packages</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>RT001</td>
+                            <td>Chennai</td>
+                            <td>Kochi</td>
+                            <td>Arun Kumar</td>
+                            <td>24</td>
+                            <td>
+                                <span class="status transit">In Transit</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>RT002</td>
+                            <td>Bangalore</td>
+                            <td>Coimbatore</td>
+                            <td>Rahul</td>
+                            <td>18</td>
+                            <td>
+                                <span class="status out">Out for Delivery</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>RT003</td>
+                            <td>Kochi</td>
+                            <td>Trivandrum</td>
+                            <td>Vishnu</td>
+                            <td>15</td>
+                            <td>
+                                <span class="status pending">Pending</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-section" style="margin-top:25px;">
+
+            <h2>📍 Route Visualization</h2>
+
+            <div style="
+                margin-top:20px;
+                padding:40px;
+                background:#fef3c7;
+                border-radius:12px;
+                text-align:center;
+                font-size:20px;
+            ">
+
+                📦 Chennai
+                &nbsp; ➡️ &nbsp;
+                🚚
+                &nbsp; ➡️ &nbsp;
+                📍 Kochi
+
+                <p style="font-size:14px; margin-top:15px; color:#777;">
+                    Simulated delivery route
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+<div class="dashboard-section">
+    <h2>🗺️ Live Route Tracking</h2>
+
+    <div class="map-box">
+        <div class="location-point start">
+            📍 Chennai
+        </div>
+
+        <div class="route-line">
+            🚚
+        </div>
+
+        <div class="location-point end">
+            📍 Kochi
+        </div>
+    </div>
+
+    <p class="map-note">
+        🚚 Courier is currently moving from Chennai to Kochi.
+        <br>
+        📡 Live location tracking is simulated for this project.
+    </p>
+</div>
